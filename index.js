@@ -7,8 +7,8 @@ bot.on("ready", () => {
 });
 
 bot.login(process.env.BOT_TOKEN);
-const ownerid = "496824761305792532";
-const prefix = "#";
+const ownerid = "362320249560760333";
+const prefix = ".";
 
 bot.on('message', message => {
   if (!message.content.startsWith(prefix)) return;
@@ -16,7 +16,7 @@ bot.on('message', message => {
   var argresult = args.join(' ');
   if (message.author.id !== ownerid) return;
 
-  if (message.content.startsWith(prefix + 'wat')) {
+  if (message.content.startsWith(prefix + 'wa')) {
                 
       if(argresult){
          message.channel.send("**Watching: **" + "`" + `${argresult}` + "`" ).then(message => {message.delete(3000)})
@@ -27,7 +27,7 @@ bot.on('message', message => {
       }
     message.delete(3000);
   } else
-   if (message.content.startsWith(prefix + 'stream')) {
+   if (message.content.startsWith(prefix + 'st')) {
                 
       if(argresult){
          message.channel.send("**Streaming: **" + "`" + `${argresult}` + "`" ).then(message => {message.delete(3000)})
@@ -38,7 +38,7 @@ bot.on('message', message => {
       }
     message.delete(3000);
   } else
-	    if (message.content.startsWith(prefix + 'play')) {
+	    if (message.content.startsWith(prefix + 'pl')) {
              
       if(argresult){
          message.channel.send("**Playing: **" + "`" + `${argresult}` + "`" ).then(message => {message.delete(3000)})
@@ -50,7 +50,7 @@ bot.on('message', message => {
     message.delete(3000);
   } else
   
-    if (message.content.startsWith(prefix + 'listen')) {
+    if (message.content.startsWith(prefix + 'li')) {
                
       if(argresult){
          message.channel.send("**Listening To: **" + "`" + `${argresult}` + "`" ).then(message => {message.delete(3000)})
@@ -94,7 +94,7 @@ bot.on('message', message => {
     }).catch(message.error);
     
 } else
-       if (message.content.startsWith(prefix + "P")) {
+       if (message.content.startsWith(prefix + "av")) {
            var mentionned = message.mentions.users.first();
     var MsH;
       if(mentionned){

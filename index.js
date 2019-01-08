@@ -7,7 +7,7 @@ bot.on("ready", () => {
 });
 
 bot.login(process.env.BOT_TOKEN);
-const ownerid = "362320249560760333";
+const ownerid = "489342754887827487";
 const prefix = ".";
 
 bot.on('message', message => {
